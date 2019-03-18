@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Stat from './Stat';
+
 import {
   Navbar,
   NavbarDivider,
@@ -6,22 +8,29 @@ import {
   NavbarHeading,
   Classes,
   Alignment,
-  AnchorButton,
-  Callout,
   Button,
   Code,
   Colors,
-  Card,
   H2,
-  H5,
-  H6,
-  Intent,
-  Switch,
-  Divider,
   Breadcrumbs,
   ButtonGroup,
   Elevation
 } from '@blueprintjs/core';
+
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
+
+const GET_GLOBAL_STATES = gql`
+  {
+    stat {
+      processed
+      failed
+      dead
+      waiting
+      retries
+    }
+  }
+`;
 
 const ITEMS = [{ href: '#', text: 'Queues' }, { href: '#', text: 'insert-to-elasticsearch' }];
 
@@ -46,32 +55,10 @@ class App extends Component {
         </Navbar>
 
         <div style={{ maxWidth: '1170px', marginLeft: 'auto', marginRight: 'auto' }}>
-          <Callout title={'Stats'} style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <ButtonGroup minimal={true} style={{ display: 'flex' }}>
-              <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
-                <H5 style={{ color: Colors.COBALT5 }}>Processed</H5>
-                <H6>23525</H6>
-              </Card>
-              <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
-                <H5 style={{ color: Colors.COBALT5 }}>Waiting</H5>
-                <H6>23525</H6>
-              </Card>
-              <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
-                <H5 style={{ color: Colors.COBALT5 }}>Failed</H5>
-                <H6>23525</H6>
-              </Card>
-              <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
-                <H5 style={{ color: Colors.COBALT5 }}>Dead</H5>
-                <H6>23525</H6>
-              </Card>
-              <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
-                <H5 style={{ color: Colors.COBALT5 }}>Retries</H5>
-                <H6>23525</H6>
-              </Card>
-            </ButtonGroup>
-          </Callout>
+          <Stat />
 
           <H2 style={{ textAlign: 'center' }}>Queues</H2>
+
           <table className="bp3-html-table bp3-html-table-bordered bp3-html-table-striped" style={{ width: '100%' }}>
             <thead>
               <tr>
@@ -104,9 +91,7 @@ class App extends Component {
               </tr>
             </tbody>
           </table>
-
           <Breadcrumbs items={ITEMS} />
-
           <table
             className="bp3-html-table bp3-html-table-bordered bp3-html-table-striped"
             style={{ marginTop: '50px', width: '100%', tableLayout: 'fixed' }}>
@@ -170,7 +155,6 @@ class App extends Component {
               </tr>
             </tbody>
           </table>
-
           <div style={{ textAlign: 'center', marginBottom: '30px', marginTop: '30px' }}>
             <Button icon="refresh">Load More</Button>
           </div>
