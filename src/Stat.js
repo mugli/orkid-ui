@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Callout, Colors, Card, H5, H6, ButtonGroup, Elevation } from '@blueprintjs/core';
+import { Callout, Colors, Card, H5, H6, ButtonGroup, Elevation, NonIdealState } from '@blueprintjs/core';
 
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -28,7 +28,7 @@ class Stat extends Component {
             }
 
             if (error) {
-              return <div style={{ color: Colors.RED5 }}>{error.message}!</div>;
+              return <NonIdealState icon="info-sign" title={error.message} />;
             }
 
             const { stat } = data;

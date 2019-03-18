@@ -17,21 +17,6 @@ import {
   Elevation
 } from '@blueprintjs/core';
 
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
-
-const GET_GLOBAL_STATES = gql`
-  {
-    stat {
-      processed
-      failed
-      dead
-      waiting
-      retries
-    }
-  }
-`;
-
 const ITEMS = [{ href: '#', text: 'Queues' }, { href: '#', text: 'insert-to-elasticsearch' }];
 
 class App extends Component {
@@ -40,13 +25,16 @@ class App extends Component {
       <div>
         <Navbar>
           <NavbarGroup align={Alignment.LEFT}>
-            <NavbarHeading style={{ color: Colors.COBALT5 }} className={Classes.LARGE}>
+            <NavbarHeading className={Classes.LARGE}>
               <h4>Orkid Dashboard</h4>
             </NavbarHeading>
             <NavbarDivider />
-            <Button className={Classes.MINIMAL} icon="home" text="Queues" />
+            <Button className={Classes.MINIMAL} icon="home" text="Queues" active />
+            <NavbarDivider />
             <Button className={Classes.MINIMAL} icon="updated" text="Result List" />
+            <NavbarDivider />
             <Button className={Classes.MINIMAL} icon="error" text="Failed List" />
+            <NavbarDivider />
             <Button className={Classes.MINIMAL} icon="ban-circle" text="Dead List" />
           </NavbarGroup>
           <NavbarGroup align={Alignment.RIGHT}>
@@ -92,17 +80,22 @@ class App extends Component {
             </tbody>
           </table>
           <Breadcrumbs items={ITEMS} />
+
+          <div style={{ textAlign: 'right' }}>
+            <Button icon="arrow-left">Previous</Button>
+            <Button icon="arrow-right">Next</Button>
+          </div>
           <table
             className="bp3-html-table bp3-html-table-bordered bp3-html-table-striped"
-            style={{ marginTop: '50px', width: '100%', tableLayout: 'fixed' }}>
+            style={{ width: '100%', tableLayout: 'fixed' }}>
             <thead>
               <tr>
-                <th>id</th>
-                <th>dedup key</th>
-                <th>retry count</th>
-                <th style={{ width: '25%' }}>data</th>
-                <th style={{ width: '25%' }}>result</th>
-                <th style={{ width: '25%' }}>error</th>
+                <th>ID</th>
+                <th>Dedup Key</th>
+                <th>Retry Count</th>
+                <th style={{ width: '25%' }}>Data</th>
+                <th style={{ width: '25%' }}>Result</th>
+                <th style={{ width: '25%' }}>Error</th>
               </tr>
             </thead>
             <tbody>
@@ -155,8 +148,9 @@ class App extends Component {
               </tr>
             </tbody>
           </table>
-          <div style={{ textAlign: 'center', marginBottom: '30px', marginTop: '30px' }}>
-            <Button icon="refresh">Load More</Button>
+          <div style={{ textAlign: 'right', marginBottom: '30px', marginTop: '30px' }}>
+            <Button icon="arrow-left">Previous</Button>
+            <Button icon="arrow-right">Next</Button>
           </div>
         </div>
       </div>
