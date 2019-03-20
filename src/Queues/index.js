@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import { H2, Breadcrumbs } from '@blueprintjs/core';
 
-import QueueTable from './QueueTable';
+import QueueTable from './Table';
+import QueueDataContainer from './DataContainer';
 
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -40,7 +41,12 @@ class QueueContainer extends Component {
             if (selectedQueue) {
               const ITEMS = [{ href: '#', text: 'Queues' }, { href: '#', text: selectedQueue }];
 
-              return <Breadcrumbs items={ITEMS} />;
+              return (
+                <div>
+                  <Breadcrumbs items={ITEMS} />
+                  <QueueDataContainer queueName={selectedQueue} />
+                </div>
+              );
             } else {
               return <QueueTable queueNames={queueNames} />;
             }

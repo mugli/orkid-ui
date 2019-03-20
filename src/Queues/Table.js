@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import QueueRow from './QueueRow';
+import QueueRow from './Row';
 
 class QueueTable extends Component {
   render() {
