@@ -37,7 +37,12 @@ class FailedList extends Component {
           Showing latest errors from all failed tasks of any queues. This is a capped list, older results will be
           removed automatically.
         </Callout>
-        <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="failedList" hideResult={true} />
+        <DataContainer
+          graphqlQuery={this.GET_LIST_DATA}
+          keyName="failedList"
+          hideResult={true}
+          columnWidth={{ id: '8%', dedupKey: '8%', qName: '8%', retryCount: '8%', data: '30%', error: '25%' }}
+        />
       </div>
     );
   }

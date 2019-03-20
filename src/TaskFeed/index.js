@@ -14,7 +14,8 @@ class TaskFeed extends Component {
       previousHandler,
       hideResult,
       hideError,
-      hideQueueName
+      hideQueueName,
+      columnWidth
     } = this.props;
 
     return (
@@ -31,13 +32,13 @@ class TaskFeed extends Component {
         <table className="bp3-html-table bp3-html-table-striped" style={{ width: '100%', tableLayout: 'fixed' }}>
           <thead>
             <tr>
-              <th style={{ width: '10%' }}>ID</th>
-              <th style={{ width: '10%' }}>Dedup Key</th>
-              {hideQueueName ? null : <th style={{ width: '10%' }}>Queue</th>}
-              <th style={{ width: '8%' }}>Retry Count</th>
-              <th style={{ width: '25%' }}>Data</th>
-              {hideResult ? null : <th style={{ width: '20%' }}>Result</th>}
-              {hideError ? null : <th style={{ width: '20%' }}>Error</th>}
+              <th style={{ width: columnWidth.id }}>ID</th>
+              <th style={{ width: columnWidth.dedupKey }}>Dedup Key</th>
+              {hideQueueName ? null : <th style={{ width: columnWidth.qName }}>Queue</th>}
+              <th style={{ width: columnWidth.retryCount }}>Retry Count</th>
+              <th style={{ width: columnWidth.data }}>Data</th>
+              {hideResult ? null : <th style={{ width: columnWidth.result }}>Result</th>}
+              {hideError ? null : <th style={{ width: columnWidth.error }}>Error</th>}
               <th>Time</th>
             </tr>
           </thead>

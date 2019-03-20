@@ -43,7 +43,12 @@ class ResultList extends Component {
             <strong>Hint</strong>: Return values from worker functions show here as results.
           </div>
         </Callout>
-        <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="resultList" hideError={true} />
+        <DataContainer
+          graphqlQuery={this.GET_LIST_DATA}
+          keyName="resultList"
+          hideError={true}
+          columnWidth={{ id: '10%', dedupKey: '10%', retryCount: '10%', data: '30%', result: '20%' }}
+        />
       </div>
     );
   }

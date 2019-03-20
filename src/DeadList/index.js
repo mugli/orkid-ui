@@ -37,7 +37,12 @@ class DeadList extends Component {
           Showing failed tasks from all queues that exceeded their retry limit. This is a capped list, older results
           will be removed automatically.
         </Callout>
-        <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="deadList" hideResult={true} />
+        <DataContainer
+          graphqlQuery={this.GET_LIST_DATA}
+          keyName="deadList"
+          hideResult={true}
+          columnWidth={{ id: '8%', dedupKey: '8%', qName: '8%', retryCount: '8%', data: '30%', error: '25%' }}
+        />
       </div>
     );
   }

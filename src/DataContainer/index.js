@@ -29,7 +29,7 @@ class QueueDataContainer extends Component {
   };
 
   render() {
-    const { queueName, graphqlQuery, keyName, hideResult, hideError, hideQueueName } = this.props;
+    const { queueName, graphqlQuery, keyName, hideResult, hideError, hideQueueName, columnWidth } = this.props;
     const { nextCursor } = this.state;
 
     return (
@@ -55,6 +55,7 @@ class QueueDataContainer extends Component {
               hideResult={hideResult}
               hideError={hideError}
               hideQueueName={hideQueueName}
+              columnWidth={columnWidth}
             />
           );
         }}

@@ -85,6 +85,7 @@ class QueueContainer extends Component {
                     hideResult={true}
                     hideError={true}
                     hideQueueName={true}
+                    columnWidth={{ id: '20%', dedupKey: '10%', retryCount: '10%', data: '40%' }}
                   />
                 </div>
               );
