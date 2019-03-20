@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Stat from './Stat';
+import QueueContainer from './Queues';
 
 import {
   Navbar,
@@ -16,8 +17,6 @@ import {
   ButtonGroup,
   Elevation
 } from '@blueprintjs/core';
-
-const ITEMS = [{ href: '#', text: 'Queues' }, { href: '#', text: 'insert-to-elasticsearch' }];
 
 class App extends Component {
   render() {
@@ -44,42 +43,7 @@ class App extends Component {
 
         <div style={{ maxWidth: '1170px', marginLeft: 'auto', marginRight: 'auto' }}>
           <Stat />
-
-          <H2 style={{ textAlign: 'center' }}>Queues</H2>
-
-          <table className="bp3-html-table bp3-html-table-bordered bp3-html-table-striped" style={{ width: '100%' }}>
-            <thead>
-              <tr>
-                <th>Queue Name</th>
-                <th>Pending Tasks</th>
-                <th>Active Workers</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className={Classes.MONOSPACE_TEXT}>
-                  <a href="#">insert-to-elasticsearch</a>
-                </td>
-                <td>100</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td className={Classes.MONOSPACE_TEXT}>
-                  <a href="#">sms</a>
-                </td>
-                <td>100</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td className={Classes.MONOSPACE_TEXT}>
-                  <a href="#">mailer</a>
-                </td>
-                <td>100</td>
-                <td>5</td>
-              </tr>
-            </tbody>
-          </table>
-          <Breadcrumbs items={ITEMS} />
+          <QueueContainer />
 
           <div style={{ textAlign: 'right' }}>
             <Button icon="arrow-left">Previous</Button>
