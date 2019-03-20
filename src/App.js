@@ -28,7 +28,9 @@ class App extends Component {
         <Navbar>
           <NavbarGroup align={Alignment.LEFT}>
             <NavbarHeading className={Classes.LARGE}>
-              <h4>Orkid Dashboard</h4>
+              <a onClick={() => this.changeActiveTab(0)}>
+                <h4>Orkid Dashboard</h4>
+              </a>
             </NavbarHeading>
             <NavbarDivider />
             <Button
@@ -64,7 +66,9 @@ class App extends Component {
             />
           </NavbarGroup>
           <NavbarGroup align={Alignment.RIGHT}>
-            <Button className={Classes.MINIMAL} icon="share" text="GitHub" />
+            <a href="https://github.com/mugli/orkid-node" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
           </NavbarGroup>
         </Navbar>
 

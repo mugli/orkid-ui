@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Classes } from '@blueprintjs/core';
+import { Classes, Button, Intent } from '@blueprintjs/core';
 
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -36,7 +36,13 @@ class QueueRow extends Component {
           return (
             <tr>
               <td className={Classes.MONOSPACE_TEXT}>
-                <a onClick={() => handleQueueSelection(queueName)}>{queue.name}</a>
+                <Button
+                  className={Classes.MINIMAL}
+                  intent={Intent.PRIMARY}
+                  rightIcon="arrow-right"
+                  onClick={() => handleQueueSelection(queueName)}>
+                  {queue.name}
+                </Button>
               </td>
               <td>
                 <a onClick={() => handleQueueSelection(queueName)}>{queue.taskCount}</a>
