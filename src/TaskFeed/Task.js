@@ -4,7 +4,7 @@ import { Classes } from '@blueprintjs/core';
 
 class Task extends Component {
   render() {
-    const { task } = this.props;
+    const { task, hideResult, hideError } = this.props;
 
     return (
       <tr>
@@ -16,12 +16,16 @@ class Task extends Component {
         <td>
           <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{task.data}</pre>
         </td>
-        <td>
-          <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{task.result}</pre>
-        </td>
-        <td>
-          <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{JSON.stringify(task.error, null, 2)}</pre>
-        </td>
+        {hideResult ? null : (
+          <td>
+            <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{task.result}</pre>
+          </td>
+        )}
+        {hideError ? null : (
+          <td>
+            <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{JSON.stringify(task.error, null, 2)}</pre>
+          </td>
+        )}
         <td>{new Date(task.at).toLocaleString()}</td>
       </tr>
     );

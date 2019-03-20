@@ -32,7 +32,7 @@ class ResultList extends Component {
   render() {
     return (
       <div style={{ marginTop: '20px' }}>
-        <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="resultList" />
+        <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="resultList" hideError={true} />
       </div>
     );
   }

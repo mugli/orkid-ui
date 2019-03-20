@@ -78,7 +78,13 @@ class QueueContainer extends Component {
                 <div>
                   <Breadcrumbs items={ITEMS} />
                   <h3 style={{ marginTop: '20px', textAlign: 'center' }}>Pending Tasks</h3>
-                  <DataContainer queueName={selectedQueue} graphqlQuery={this.query} keyName="queue" />
+                  <DataContainer
+                    queueName={selectedQueue}
+                    graphqlQuery={this.query}
+                    keyName="queue"
+                    hideResult={true}
+                    hideError={true}
+                  />
                 </div>
               );
             } else {

@@ -32,7 +32,7 @@ class DeadList extends Component {
   render() {
     return (
       <div style={{ marginTop: '20px' }}>
-        <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="deadList" />
+        <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="deadList" hideResult={true} />
       </div>
     );
   }

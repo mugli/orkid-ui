@@ -29,7 +29,7 @@ class QueueDataContainer extends Component {
   };
 
   render() {
-    const { queueName, graphqlQuery, keyName } = this.props;
+    const { queueName, graphqlQuery, keyName, hideResult, hideError } = this.props;
     const { nextCursor } = this.state;
 
     return (
@@ -52,6 +52,8 @@ class QueueDataContainer extends Component {
               hasPrevPage={!!this.cursorStack.length}
               nextHandler={this.nextHandler}
               previousHandler={this.previousHandler}
+              hideResult={hideResult}
+              hideError={hideError}
             />
           );
         }}
