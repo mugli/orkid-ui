@@ -41,7 +41,7 @@ class App extends Component {
             <NavbarDivider />
             <Button
               className={Classes.MINIMAL}
-              icon="updated"
+              icon="grid-view"
               text="Result List"
               active={activeTabIndex === 1}
               onClick={() => this.changeActiveTab(1)}

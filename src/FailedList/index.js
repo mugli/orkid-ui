@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Callout } from '@blueprintjs/core';
+import { Callout, Intent } from '@blueprintjs/core';
 import DataContainer from '../DataContainer';
 import { feedLength } from '../config';
 import gql from 'graphql-tag';
@@ -33,7 +33,7 @@ class FailedList extends Component {
   render() {
     return (
       <div style={{ marginTop: '20px' }}>
-        <Callout title="Failed List" style={{ marginBottom: '20px' }}>
+        <Callout title="Failed List" style={{ marginBottom: '20px' }} intent={Intent.WARNING} icon="error">
           Showing latest errors from all failed tasks of any queues. This is a capped list, older results will be
           removed automatically.
         </Callout>

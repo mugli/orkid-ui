@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Callout } from '@blueprintjs/core';
+import { Callout, Intent, Icon } from '@blueprintjs/core';
 
 import DataContainer from '../DataContainer';
 import { feedLength } from '../config';
@@ -34,7 +34,7 @@ class ResultList extends Component {
   render() {
     return (
       <div style={{ marginTop: '20px' }}>
-        <Callout title="Result List" style={{ marginBottom: '20px' }}>
+        <Callout title="Result List" style={{ marginBottom: '20px' }} intent={Intent.SUCCESS} icon="grid-view">
           Showing latest results from successful tasks of any queues. This is a capped list, older results will be
           removed automatically.
           <br />
