@@ -25,9 +25,10 @@ class TaskFeed extends Component {
               <th>ID</th>
               <th>Dedup Key</th>
               <th>Retry Count</th>
-              <th style={{ width: '25%' }}>Data</th>
-              <th style={{ width: '25%' }}>Result</th>
-              <th style={{ width: '25%' }}>Error</th>
+              <th style={{ width: '20%' }}>Data</th>
+              <th style={{ width: '20%' }}>Result</th>
+              <th style={{ width: '20%' }}>Error</th>
+              <th>Time</th>
             </tr>
           </thead>
           <tbody>
