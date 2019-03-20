@@ -8,16 +8,14 @@ class QueueDataContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { hasNextPage: false, nextCursor: undefined };
+    this.state = { nextCursor: undefined };
   }
 
   availableNextCursor = undefined;
   cursorStack = [];
 
   nextHandler = () => {
-    const { hasNextPage } = this.state;
-
-    if (hasNextPage) {
+    if (!!this.availableNextCursor) {
       this.cursorStack.push(this.state.nextCursor);
       this.setState({ nextCursor: this.availableNextCursor });
     }
@@ -32,12 +30,8 @@ class QueueDataContainer extends Component {
 
   handleQueryComplete = data => {
     const { keyName } = this.props;
-    const { hasNextPage, nextCursor } = data[keyName].taskFeed;
+    const { nextCursor } = data[keyName].taskFeed;
     this.availableNextCursor = nextCursor;
-
-    if (this.state.hasNextPage !== hasNextPage) {
-      this.setState({ hasNextPage });
-    }
   };
 
   render() {
