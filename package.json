@@ -1,7 +1,12 @@
 {
   "name": "orkid-ui",
   "version": "0.1.0",
-  "private": true,
+  "author": "Mehdi Hasan Khan <mhasan@omicronlab.com> (https://about.me/mehdi.hasan.khan)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mugli/orkid-ui.git"
+  },
   "dependencies": {
     "@blueprintjs/core": "^3.14.1",
     "apollo-cache-inmemory": "^1.5.1",
