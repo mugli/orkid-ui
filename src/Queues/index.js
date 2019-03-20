@@ -84,6 +84,7 @@ class QueueContainer extends Component {
                     keyName="queue"
                     hideResult={true}
                     hideError={true}
+                    hideQueueName={true}
                   />
                 </div>
               );

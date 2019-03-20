@@ -38,7 +38,9 @@ class QueueRow extends Component {
               <td className={Classes.MONOSPACE_TEXT}>
                 <a onClick={() => handleQueueSelection(queueName)}>{queue.name}</a>
               </td>
-              <td>{queue.taskCount}</td>
+              <td>
+                <a onClick={() => handleQueueSelection(queueName)}>{queue.taskCount}</a>
+              </td>
               <td>{queue.activeWorkerCount}</td>
             </tr>
           );

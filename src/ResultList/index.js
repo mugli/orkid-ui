@@ -16,6 +16,7 @@ class ResultList extends Component {
             id
             data
             dedupKey
+            qname
             retryCount
             result
             error {
@@ -34,12 +35,12 @@ class ResultList extends Component {
     return (
       <div style={{ marginTop: '20px' }}>
         <Callout title="Result List" style={{ marginBottom: '20px' }}>
-          Showing latest results from successful tasks of all queues together. This is a capped list, older results will
-          be removed automatically.
+          Showing latest results from successful tasks of any queues. This is a capped list, older results will be
+          removed automatically.
           <br />
           <br />
           <div>
-            <strong>Hint</strong>: Return values from worker functions show here as result.
+            <strong>Hint</strong>: Return values from worker functions show here as results.
           </div>
         </Callout>
         <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="resultList" hideError={true} />

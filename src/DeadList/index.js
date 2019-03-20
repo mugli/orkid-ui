@@ -15,6 +15,7 @@ class DeadList extends Component {
             id
             data
             dedupKey
+            qname
             retryCount
             result
             error {

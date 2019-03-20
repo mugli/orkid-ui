@@ -6,7 +6,16 @@ import Task from './Task';
 
 class TaskFeed extends Component {
   render() {
-    const { tasks, hasNextPage, hasPrevPage, nextHandler, previousHandler, hideResult, hideError } = this.props;
+    const {
+      tasks,
+      hasNextPage,
+      hasPrevPage,
+      nextHandler,
+      previousHandler,
+      hideResult,
+      hideError,
+      hideQueueName
+    } = this.props;
 
     return (
       <div>
@@ -24,16 +33,23 @@ class TaskFeed extends Component {
             <tr>
               <th style={{ width: '10%' }}>ID</th>
               <th style={{ width: '10%' }}>Dedup Key</th>
-              <th style={{ width: '10%' }}>Retry Count</th>
-              <th style={{ width: '30%' }}>Data</th>
-              {hideResult ? null : <th style={{ width: '25%' }}>Result</th>}
-              {hideError ? null : <th style={{ width: '25%' }}>Error</th>}
+              {hideQueueName ? null : <th style={{ width: '10%' }}>Queue</th>}
+              <th style={{ width: '8%' }}>Retry Count</th>
+              <th style={{ width: '25%' }}>Data</th>
+              {hideResult ? null : <th style={{ width: '20%' }}>Result</th>}
+              {hideError ? null : <th style={{ width: '20%' }}>Error</th>}
               <th>Time</th>
             </tr>
           </thead>
           <tbody>
             {tasks.map(task => (
-              <Task task={task} key={task.id} hideResult={hideResult} hideError={hideError} />
+              <Task
+                task={task}
+                key={task.id}
+                hideResult={hideResult}
+                hideError={hideError}
+                hideQueueName={hideQueueName}
+              />
             ))}
           </tbody>
         </table>

@@ -15,6 +15,7 @@ class FailedList extends Component {
             id
             data
             dedupKey
+            qname
             retryCount
             result
             error {
@@ -33,7 +34,7 @@ class FailedList extends Component {
     return (
       <div style={{ marginTop: '20px' }}>
         <Callout title="Failed List" style={{ marginBottom: '20px' }}>
-          Showing latest errors from failed tasks of all queues together. This is a capped list, older results will be
+          Showing latest errors from all failed tasks of any queues. This is a capped list, older results will be
           removed automatically.
         </Callout>
         <DataContainer graphqlQuery={this.GET_LIST_DATA} keyName="failedList" hideResult={true} />
