@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Spinner, NonIdealState } from '@blueprintjs/core';
 import TaskFeed from '../TaskFeed';
 
 import { Query } from 'react-apollo';
@@ -36,11 +36,11 @@ class QueueDataContainer extends Component {
       <Query query={graphqlQuery} variables={{ queueName, nextCursor }}>
         {({ data, loading, error }) => {
           if (loading) {
-            return null;
+            return <Spinner />;
           }
 
           if (error) {
-            return null;
+            return <NonIdealState icon="info-sign" title={error.message} />;
           }
 
           this.availableNextCursor = data[keyName].taskFeed.nextCursor;
