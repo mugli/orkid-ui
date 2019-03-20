@@ -1,6 +1,6 @@
 # orkid-ui
 
-[![NPM version](https://img.shields.io/npm/v/orkid-api.svg)](https://www.npmjs.com/package/orkid-ui)
+[![NPM version](https://img.shields.io/npm/v/orkid-ui.svg)](https://www.npmjs.com/package/orkid-ui)
 ![](https://img.shields.io/david/mugli/orkid-ui.svg?style=flat)
 ![](https://img.shields.io/david/dev/mugli/orkid-ui.svg?style=flat)
 ![](https://img.shields.io/node/v/orkid-api.ui?style=flat)
