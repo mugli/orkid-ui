@@ -5,21 +5,7 @@ import ResultList from './ResultList';
 import FailedList from './FailedList';
 import DeadList from './DeadList';
 
-import {
-  Navbar,
-  NavbarDivider,
-  NavbarGroup,
-  NavbarHeading,
-  Classes,
-  Alignment,
-  Button,
-  Code,
-  Colors,
-  H2,
-  Breadcrumbs,
-  ButtonGroup,
-  Elevation
-} from '@blueprintjs/core';
+import { Navbar, NavbarDivider, NavbarGroup, NavbarHeading, Classes, Alignment, Button } from '@blueprintjs/core';
 
 class App extends Component {
   constructor(props) {

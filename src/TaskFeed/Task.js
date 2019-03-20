@@ -17,7 +17,7 @@ class Task extends Component {
           <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{task.data}</pre>
         </td>
         <td>
-          <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{JSON.stringify(task.result, null, 2)}</pre>
+          <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{task.result}</pre>
         </td>
         <td>
           <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{JSON.stringify(task.error, null, 2)}</pre>
