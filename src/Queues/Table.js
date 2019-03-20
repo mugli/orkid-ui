@@ -4,7 +4,7 @@ import QueueRow from './Row';
 
 class QueueTable extends Component {
   render() {
-    const { queueNames } = this.props;
+    const { queueNames, handleQueueSelection } = this.props;
     return (
       <table className="bp3-html-table bp3-html-table-bordered bp3-html-table-striped" style={{ width: '100%' }}>
         <thead>
@@ -16,7 +16,7 @@ class QueueTable extends Component {
         </thead>
         <tbody>
           {queueNames.map(qName => {
-            return <QueueRow queueName={qName} key={qName} />;
+            return <QueueRow queueName={qName} key={qName} handleQueueSelection={handleQueueSelection} />;
           })}
         </tbody>
       </table>

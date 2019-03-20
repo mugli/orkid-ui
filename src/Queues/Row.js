@@ -18,7 +18,7 @@ class QueueRow extends Component {
   `;
 
   render() {
-    const { queueName } = this.props;
+    const { queueName, handleQueueSelection } = this.props;
 
     return (
       <Query query={this.GET_QUEUE_DATA} variables={{ queueName }}>
@@ -36,7 +36,7 @@ class QueueRow extends Component {
           return (
             <tr>
               <td className={Classes.MONOSPACE_TEXT}>
-                <a href="#">{queue.name}</a>
+                <a onClick={() => handleQueueSelection(queueName)}>{queue.name}</a>
               </td>
               <td>{queue.taskCount}</td>
               <td>{queue.activeWorkerCount}</td>

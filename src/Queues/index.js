@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { H2, Breadcrumbs } from '@blueprintjs/core';
+import { H2, Breadcrumbs, Intent } from '@blueprintjs/core';
 
 import QueueTable from './Table';
 import DataContainer from '../DataContainer';
@@ -17,7 +17,7 @@ class QueueContainer extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { selectedQueue: 'insert-to-elasticsearch' };
+    this.state = { selectedQueue: undefined };
   }
 
   query = gql`
@@ -44,13 +44,15 @@ class QueueContainer extends Component {
     }
   `;
 
+  handleQueueSelection = selectedQueue => {
+    this.setState({ selectedQueue });
+  };
+
   render() {
     const { selectedQueue } = this.state;
 
     return (
       <div>
-        <H2 style={{ textAlign: 'center' }}>Queues</H2>
-
         <Query query={this.GET_QUEUE_NAMES}>
           {({ data, loading, error }) => {
             if (loading) {
@@ -63,16 +65,29 @@ class QueueContainer extends Component {
 
             const { queueNames } = data;
             if (selectedQueue) {
-              const ITEMS = [{ href: '#', text: 'Queues' }, { href: '#', text: selectedQueue }];
+              const ITEMS = [
+                {
+                  text: 'List of Queues',
+                  onClick: () => this.handleQueueSelection(undefined),
+                  intent: Intent.DANGER
+                },
+                { text: selectedQueue, current: true }
+              ];
 
               return (
                 <div>
                   <Breadcrumbs items={ITEMS} />
+                  <h3 style={{ marginTop: '20px', textAlign: 'center' }}>Pending Tasks</h3>
                   <DataContainer queueName={selectedQueue} graphqlQuery={this.query} keyName="queue" />
                 </div>
               );
             } else {
-              return <QueueTable queueNames={queueNames} />;
+              return (
+                <div>
+                  <H2 style={{ textAlign: 'center' }}>Queues</H2>
+                  <QueueTable queueNames={queueNames} handleQueueSelection={this.handleQueueSelection} />
+                </div>
+              );
             }
           }}
         </Query>
