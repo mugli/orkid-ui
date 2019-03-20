@@ -19,9 +19,7 @@ class TaskFeed extends Component {
           </Button>
         </div>
 
-        <table
-          className="bp3-html-table bp3-html-table-bordered bp3-html-table-striped"
-          style={{ width: '100%', tableLayout: 'fixed' }}>
+        <table className="bp3-html-table bp3-html-table-striped" style={{ width: '100%', tableLayout: 'fixed' }}>
           <thead>
             <tr>
               <th>ID</th>

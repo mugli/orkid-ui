@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 import DataContainer from '../DataContainer';
-
+import { feedLength } from '../config';
 import gql from 'graphql-tag';
 
 class FailedList extends Component {
   GET_LIST_DATA = gql`
     query Queue($nextCursor: String) {
       failedList {
-        taskFeed(limit: 3, nextCursor: $nextCursor) {
+        taskFeed(limit: ${feedLength}, nextCursor: $nextCursor) {
           hasNextPage
           nextCursor
           tasks {

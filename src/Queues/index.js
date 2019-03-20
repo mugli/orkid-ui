@@ -4,7 +4,7 @@ import { H2, Breadcrumbs } from '@blueprintjs/core';
 
 import QueueTable from './Table';
 import DataContainer from '../DataContainer';
-
+import { feedLength } from '../config';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 
@@ -23,7 +23,7 @@ class QueueContainer extends Component {
   query = gql`
     query Queue($queueName: String!, $nextCursor: String) {
       queue(name: $queueName) {
-        taskFeed(limit: 3, nextCursor: $nextCursor) {
+        taskFeed(limit: ${feedLength}, nextCursor: $nextCursor) {
           hasNextPage
           nextCursor
           tasks {
