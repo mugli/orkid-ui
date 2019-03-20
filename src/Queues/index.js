@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { H2, Breadcrumbs, Intent } from '@blueprintjs/core';
+import { H2, Breadcrumbs, Intent, Spinner, NonIdealState } from '@blueprintjs/core';
 
 import QueueTable from './Table';
 import DataContainer from '../DataContainer';
@@ -56,11 +56,11 @@ class QueueContainer extends Component {
         <Query query={this.GET_QUEUE_NAMES}>
           {({ data, loading, error }) => {
             if (loading) {
-              return null;
+              return <Spinner />;
             }
 
             if (error) {
-              return null;
+              return <NonIdealState icon="info-sign" title={error.message} />;
             }
 
             const { queueNames } = data;
