@@ -28,21 +28,12 @@ class QueueDataContainer extends Component {
     }
   };
 
-  handleQueryComplete = data => {
-    const { keyName } = this.props;
-    const { nextCursor } = data[keyName].taskFeed;
-    this.availableNextCursor = nextCursor;
-  };
-
   render() {
     const { queueName, graphqlQuery, keyName } = this.props;
     const { nextCursor } = this.state;
 
     return (
-      <Query
-        query={graphqlQuery}
-        variables={{ queueName, nextCursor }}
-        onCompleted={data => this.handleQueryComplete(data)}>
+      <Query query={graphqlQuery} variables={{ queueName, nextCursor }}>
         {({ data, loading, error }) => {
           if (loading) {
             return null;
@@ -51,6 +42,8 @@ class QueueDataContainer extends Component {
           if (error) {
             return null;
           }
+
+          this.availableNextCursor = data[keyName].taskFeed.nextCursor;
 
           return (
             <TaskFeed
