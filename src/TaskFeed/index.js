@@ -5,7 +5,7 @@ import { Classes, Button } from '@blueprintjs/core';
 import Task from './Task';
 
 class TaskFeed extends Component {
-  render() {
+  taskTable = () => {
     const {
       tasks,
       hasNextPage,
@@ -65,6 +65,16 @@ class TaskFeed extends Component {
         </div>
       </div>
     );
+  };
+
+  render() {
+    const { tasks } = this.props;
+
+    if (tasks.length) {
+      return this.taskTable();
+    } else {
+      return <div style={{ marginTop: '40px', textAlign: 'center' }}>This list is empty!</div>;
+    }
   }
 }
 

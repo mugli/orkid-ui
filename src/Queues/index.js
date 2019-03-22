@@ -93,7 +93,14 @@ class QueueContainer extends Component {
               return (
                 <div>
                   <H2 style={{ textAlign: 'center' }}>Queues</H2>
-                  <QueueTable queueNames={queueNames} handleQueueSelection={this.handleQueueSelection} />
+                  {queueNames.length ? (
+                    <QueueTable queueNames={queueNames} handleQueueSelection={this.handleQueueSelection} />
+                  ) : (
+                    <div style={{ textAlign: 'center' }}>
+                      No queues found! <a href="https://github.com/mugli/orkid-node/tree/master/examples">Need help</a>{' '}
+                      creating one?
+                    </div>
+                  )}
                 </div>
               );
             }

@@ -33,7 +33,7 @@ class FailedList extends Component {
   render() {
     return (
       <div style={{ marginTop: '20px' }}>
-        <Callout title="Failed List" style={{ marginBottom: '20px' }} intent={Intent.WARNING} icon="error">
+        <Callout title="Failed List" style={{ marginBottom: '20px' }} intent={Intent.WARNING}>
           Showing latest errors from all failed tasks of any queues. This is a capped list, older results will be
           removed automatically.
         </Callout>
