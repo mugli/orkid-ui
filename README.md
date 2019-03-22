@@ -10,4 +10,27 @@ Dashboard to monitor and manage [Orkid task queue](https://github.com/mugli/orki
 
 ![screenshot](https://raw.githubusercontent.com/mugli/orkid-ui/master/screenshot.png)
 
-[TODO:]
+📎 **This package should come bundled with Orkid UI.**
+End users of [Orkid queue](https://github.com/mugli/orkid-node) don't have to use this separately.
+
+_If you are contributing to the API or UI projects, please read below._
+
+## Development
+
+### Start API Server
+
+Start `orkid-api` as described here: https://github.com/mugli/orkid-api#development
+
+### Start Orkid UI in dev mode
+
+```
+npm run dev
+```
+
+## Authors
+
+- Mehdi Hasan Khan ([@MehdiHK](https://twitter.com/MehdiHK))
+
+## License
+
+MIT
