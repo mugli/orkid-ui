@@ -27,10 +27,17 @@ Start `orkid-api` as described here: https://github.com/mugli/orkid-api#developm
 npm run dev
 ```
 
-## Authors
+## Author
 
 - Mehdi Hasan Khan ([@MehdiHK](https://twitter.com/MehdiHK))
 
 ## License
 
 MIT
+
+---
+
+### Related Projects
+
+- [orkid-node](https://github.com/mugli/orkid-node): Reliable and modern Redis based task queue for Node.js
+- [orkid-api](https://github.com/mugli/orkid-api): GraphQL API to monitor and manage Orkid task queue
