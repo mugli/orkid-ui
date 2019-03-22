@@ -11,7 +11,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import App from './App';
 
-const GRAPHQL_BASE_URL = 'http://localhost:4000/graphql';
+const GRAPHQL_BASE_URL = '/api/graphql';
 
 const httpLink = new HttpLink({
   uri: GRAPHQL_BASE_URL

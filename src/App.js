@@ -27,10 +27,12 @@ class App extends Component {
       <div>
         <Navbar>
           <NavbarGroup align={Alignment.LEFT}>
-            <NavbarHeading className={Classes.LARGE}>
-              <a onClick={() => this.changeActiveTab(0)}>
-                <h4>Orkid Dashboard</h4>
-              </a>
+            <NavbarHeading
+              className={Classes.LARGE}
+              onClick={() => this.changeActiveTab(0)}
+              style={{ display: 'inline-flex', cursor: 'pointer' }}>
+              <img src="./orkid.svg" alt="Orkid Logo" style={{ margin: '10px', filter: 'invert(100%)' }} />
+              <h4>Orkid Dashboard</h4>
             </NavbarHeading>
             <NavbarDivider />
             <Button
