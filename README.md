@@ -37,5 +37,5 @@ MIT
 
 ### Related Projects
 
-- [orkid-node](https://github.com/mugli/orkid-node): Reliable and modern Redis based task queue for Node.js
-- [orkid-api](https://github.com/mugli/orkid-api): GraphQL API to monitor and manage Orkid task queue
+- [orkid-node](https://github.com/mugli/orkid-node): Reliable and modern Redis based task queue for Node.js. Use this to produce and consume jobs.
+- [orkid-api](https://github.com/mugli/orkid-api): GraphQL API to monitor and manage Orkid task queue (used internally by orkid-ui).
