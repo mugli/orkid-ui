@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Classes, Button } from '@blueprintjs/core';
+import { Button } from '@blueprintjs/core';
 
 import Task from './Task';
 

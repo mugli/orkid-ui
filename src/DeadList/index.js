@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Callout, Intent } from '@blueprintjs/core';
+import { Callout } from '@blueprintjs/core';
 import DataContainer from '../DataContainer';
 import { feedLength } from '../config';
 import gql from 'graphql-tag';

@@ -30,7 +30,8 @@ class App extends Component {
             <NavbarHeading
               className={Classes.LARGE}
               onClick={() => this.changeActiveTab(0)}
-              style={{ display: 'inline-flex', cursor: 'pointer' }}>
+              style={{ display: 'inline-flex', cursor: 'pointer' }}
+            >
               <img src="./orkid.svg" alt="Orkid Logo" style={{ margin: '10px', filter: 'invert(100%)' }} />
               <h4>Orkid Dashboard</h4>
             </NavbarHeading>

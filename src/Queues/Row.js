@@ -40,7 +40,8 @@ class QueueRow extends Component {
                   className={Classes.MINIMAL}
                   intent={Intent.PRIMARY}
                   rightIcon="arrow-right"
-                  onClick={() => handleQueueSelection(queueName)}>
+                  onClick={() => handleQueueSelection(queueName)}
+                >
                   {queue.name}
                 </Button>
               </td>
