@@ -5,7 +5,8 @@
   "license": "MIT",
   "main": "index.js",
   "bin": {
-    "serve": "./bin/serve.js"
+    "serve": "./bin/serve.js",
+    "orkid-ui": "./bin/serve.js"
   },
   "scripts": {
     "dev": "react-scripts start",
