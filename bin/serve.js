@@ -20,10 +20,12 @@ if (nodeEnv === 'production') {
 }
 
 const orkidUI = require('../index');
+
 const redisConfig = {
   port: redisPort,
   host: redisHost
 };
+
 const express = orkidUI(redisConfig, user, pass);
 
 express.listen(port, host, () => {
