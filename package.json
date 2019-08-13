@@ -23,7 +23,6 @@
     "type": "git",
     "url": "git+https://github.com/mugli/orkid-ui.git"
   },
-  "homepage": "https://github.com/mugli/orkid-ui#readme",
   "author": "Mehdi Hasan Khan <mhasan@omicronlab.com> (https://about.me/mehdi.hasan.khan)",
   "dependencies": {
     "basic-auth": "^2.0.1",
