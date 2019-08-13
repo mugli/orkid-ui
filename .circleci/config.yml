@@ -25,7 +25,7 @@ jobs:
           command: npm run lint
       - run:
           name: build
-          command: npm run build
+          command: CI=false npm run build
 
   publish-tags:
     working_directory: ~/orkid-ui
