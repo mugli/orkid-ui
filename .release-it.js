@@ -16,7 +16,7 @@ module.exports = {
     tagAnnotation: 'Release ${version}',
     tagArgs: '',
     push: true,
-    pushArgs: 'v${version}'
+    pushArgs: '--follow-tags'
   },
   npm: {
     publish: true
