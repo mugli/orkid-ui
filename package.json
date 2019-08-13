@@ -9,19 +9,19 @@
     "url": "git+https://github.com/mugli/orkid-ui.git"
   },
   "dependencies": {
-    "@blueprintjs/core": "^3.14.1",
-    "apollo-cache-inmemory": "^1.5.1",
-    "apollo-client": "^2.5.1",
-    "apollo-link-http": "^1.5.14",
+    "@blueprintjs/core": "^3.18.0",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link-http": "^1.5.15",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "graphql": "^14.1.1",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
     "orkid-api": "^0.4.0",
-    "react": "^16.8.4",
-    "react-apollo": "^2.5.2",
-    "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react": "^16.9.0",
+    "react-apollo": "^3.0.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.0"
   },
   "scripts": {
     "dev": "react-scripts start",
@@ -38,5 +38,9 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://localhost:4000"
+  "proxy": "http://localhost:4100",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "prettier": "^1.18.2"
+  }
 }
