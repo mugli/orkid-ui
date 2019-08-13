@@ -11,7 +11,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': 'error',
-    'no-unused-vars': 'error',
-    'jsx-a11y/anchor-is-valid': 0
+    'no-unused-vars': 'error'
   }
 };

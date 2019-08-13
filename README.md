@@ -1,6 +1,7 @@
 # orkid-ui
 
 [![NPM version](https://img.shields.io/npm/v/orkid-ui.svg)](https://www.npmjs.com/package/orkid-ui)
+![Build Status](https://img.shields.io/circleci/build/github/mugli/orkid-ui/master?token=f78af6f8cfd2fae3da889804cb09d0620495a8f8)
 ![Dependencies](https://img.shields.io/david/mugli/orkid-ui.svg?style=flat)
 ![Dev Dependencies](https://img.shields.io/david/dev/mugli/orkid-ui.svg?style=flat)
 ![License](https://img.shields.io/npm/l/orkid-ui?style=flat)
