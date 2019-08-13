@@ -1,15 +1,14 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/
-#
+version: 2
 
-version: 2 # use CircleCI 2.0
-jobs: # a collection of steps
-  build: # runs not using Workflows must have a `build` job as entry point
-    working_directory: ~/orkid-ui # directory where steps will run
+###########################################################################################
+
+jobs:
+  build:
+    working_directory: ~/orkid-ui
     docker: # run the steps with Docker
       - image: circleci/node:10 # ...with this image as the primary container; this is where all `steps` will run
       - image: redis:5 # and this image as the secondary service container
+      - image: circleci/buildpack-deps:stretch
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
       - restore_cache: # special step to restore the dependency cache
@@ -22,9 +21,41 @@ jobs: # a collection of steps
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
-      - run: # lint
+      - run:
           name: lint
           command: npm run lint
-      - run: # build
-          name: buikd
+      - run:
+          name: build
           command: npm run build
+
+  publish-tags:
+    environment:
+      IMAGE_NAME: orkidio/orkid-ui
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    steps:
+      - setup_remote_docker
+      - run:
+          name: Docker build and publish image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            IMAGE_TAG=${CIRCLE_TAG/v/''}
+            docker build -t $IMAGE_NAME:latest -t $IMAGE_NAME:$IMAGE_TAG .
+            docker push $IMAGE_NAME:latest
+            docker push $IMAGE_NAME:$IMAGE_TAG
+
+###########################################################################################
+
+workflows:
+  version: 2
+  build-master:
+    jobs:
+      - build
+      - publish-tags:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
