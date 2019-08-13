@@ -8,7 +8,6 @@ jobs:
     docker: # run the steps with Docker
       - image: circleci/node:10 # ...with this image as the primary container; this is where all `steps` will run
       - image: redis:5 # and this image as the secondary service container
-      - image: circleci/buildpack-deps:stretch
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
       - restore_cache: # special step to restore the dependency cache
@@ -29,11 +28,13 @@ jobs:
           command: npm run build
 
   publish-tags:
+    working_directory: ~/orkid-ui
     environment:
       IMAGE_NAME: orkidio/orkid-ui
     docker:
       - image: circleci/buildpack-deps:stretch
     steps:
+      - checkout
       - setup_remote_docker
       - run:
           name: Docker build and publish image to Docker Hub
