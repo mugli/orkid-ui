@@ -1,16 +1,30 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const auth = require('basic-auth');
+
 const { Apollo } = require('orkid-api');
 
-function initServer(redisClient) {
-  if (!redisClient) {
-    throw new Error('A redisClient (`ioredis` instance) is required.');
+function initServer(redisConfig, httpUser, httpPass) {
+  if (!redisConfig) {
+    throw new Error('Redis configuration is required.');
   }
 
   const app = express();
   app.use(cors());
   app.set('x-powered-by', false);
+
+  if (httpUser && httpPass) {
+    console.log('Using basic authentication');
+    app.use(function(request, response, next) {
+      var user = auth(request);
+      if (!user || httpUser !== user.name || httpPass !== user.pass) {
+        response.set('WWW-Authenticate', 'Basic realm="Orkid"');
+        return response.status(401).send();
+      }
+      return next();
+    });
+  }
 
   app.use(express.static(path.join(__dirname, 'build')));
 
@@ -18,9 +32,9 @@ function initServer(redisClient) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 
-  const redis = redisClient.duplicate();
-  const apollo = Apollo(redis);
+  const apollo = Apollo(redisConfig);
   apollo.applyMiddleware({ app, path: '/api/graphql' });
+
   return app;
 }
 

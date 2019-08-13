@@ -14,11 +14,11 @@ class App extends Component {
     this.state = { activeTabIndex: 0 };
   }
 
-  tabs = [<Home />, <ResultList />, <FailedList />, <DeadList />];
-
   changeActiveTab = activeTabIndex => {
     this.setState({ activeTabIndex });
   };
+
+  tabs = [<Home />, <ResultList />, <FailedList />, <DeadList />];
 
   render() {
     const { activeTabIndex } = this.state;
@@ -74,9 +74,7 @@ class App extends Component {
           </NavbarGroup>
         </Navbar>
 
-        <div style={{ maxWidth: '1170px', marginLeft: 'auto', marginRight: 'auto' }}>
-          {this.tabs[this.state.activeTabIndex]}
-        </div>
+        <div className="orkid-container">{this.tabs[this.state.activeTabIndex]}</div>
       </div>
     );
   }
