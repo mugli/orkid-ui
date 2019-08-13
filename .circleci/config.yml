@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 ###########################################################################################
 
@@ -40,6 +40,7 @@ jobs:
           name: Docker build and publish image to Docker Hub
           command: |
             echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            CIRCLE_TAG="$(git tag -l --points-at HEAD)"
             IMAGE_TAG=${CIRCLE_TAG/v/''}
             docker build -t $IMAGE_NAME:latest -t $IMAGE_NAME:$IMAGE_TAG .
             docker push $IMAGE_NAME:latest
