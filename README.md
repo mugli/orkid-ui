@@ -1,13 +1,17 @@
 # orkid-ui
 
 [![NPM version](https://img.shields.io/npm/v/orkid-ui.svg)](https://www.npmjs.com/package/orkid-ui)
-![](https://img.shields.io/david/mugli/orkid-ui.svg?style=flat)
-![](https://img.shields.io/david/dev/mugli/orkid-ui.svg?style=flat)
-![](https://img.shields.io/npm/l/orkid-ui?style=flat)
+![Dependencies](https://img.shields.io/david/mugli/orkid-ui.svg?style=flat)
+![Dev Dependencies](https://img.shields.io/david/dev/mugli/orkid-ui.svg?style=flat)
+![License](https://img.shields.io/npm/l/orkid-ui?style=flat)
 
 Dashboard to monitor and manage [Orkid task queue](https://github.com/mugli/orkid-node).
 
 ![screenshot](https://raw.githubusercontent.com/mugli/orkid-ui/master/screenshot.png)
+
+## Running in Production
+
+TODO: Add docker image and docker-compose.yml files
 
 ## Development
 
