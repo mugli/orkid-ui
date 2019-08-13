@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const auth = require('basic-auth');
+const morgan = require('morgan');
 
 const { Apollo } = require('orkid-api');
 
@@ -13,6 +14,7 @@ function initServer(redisConfig, httpUser, httpPass) {
   const app = express();
   app.use(cors());
   app.set('x-powered-by', false);
+  app.use(morgan());
 
   if (httpUser && httpPass) {
     console.log('Using basic authentication');
