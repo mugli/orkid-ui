@@ -12,7 +12,7 @@ module.exports = {
     commitMessage: 'Release ${version}',
     commitArgs: '',
     tag: true,
-    tagName: '${version}',
+    tagName: 'v${version}',
     tagAnnotation: 'Release ${version}',
     tagArgs: '',
     push: true,

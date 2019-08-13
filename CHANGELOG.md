@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.4.0](https://github.com/mugli/orkid-ui/compare/v0.3.0...v0.4.0)
+#### [v0.4.1](https://github.com/mugli/orkid-ui/compare/0.4.0...v0.4.1)
+
+> 13 August 2019
+
+- Update circle config to change tag format [`3fe9ad5`](https://github.com/mugli/orkid-ui/commit/3fe9ad5509ba7b0171fd1f6236e737bc76e1f10d)
+
+#### [0.4.0](https://github.com/mugli/orkid-ui/compare/v0.3.0...0.4.0)
 
 > 13 August 2019
 
