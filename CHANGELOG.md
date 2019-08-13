@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.4.1](https://github.com/mugli/orkid-ui/compare/0.4.0...v0.4.1)
+#### [v0.4.4](https://github.com/mugli/orkid-ui/compare/0.4.1...v0.4.4)
+
+> 13 August 2019
+
+- Fix relative path by removing homepage from package.json [`636fcca`](https://github.com/mugli/orkid-ui/commit/636fcca2203ca3843987efef4bd45034e81bcf32)
+- Update changelog [`6e3b27f`](https://github.com/mugli/orkid-ui/commit/6e3b27fd3003ea3fe434a8e4d6ae43c4fcc79651)
+
+#### [0.4.1](https://github.com/mugli/orkid-ui/compare/0.4.0...0.4.1)
 
 > 13 August 2019
 
 - Update circle config to change tag format [`3fe9ad5`](https://github.com/mugli/orkid-ui/commit/3fe9ad5509ba7b0171fd1f6236e737bc76e1f10d)
+- Release 0.4.1 [`e1bfa82`](https://github.com/mugli/orkid-ui/commit/e1bfa82485971bae61c257763a02409f0a14d0d6)
 
 #### [0.4.0](https://github.com/mugli/orkid-ui/compare/v0.3.0...0.4.0)
 
