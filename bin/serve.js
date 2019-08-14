@@ -28,6 +28,15 @@ const redisConfig = {
 
 const express = orkidUI(redisConfig, user, pass);
 
+const signals = ['SIGHUP', 'SIGINT', 'SIGTERM'];
+
+signals.forEach(signal => {
+  process.on(signal, function() {
+    console.log(`Quitting on ${signal}`);
+    process.exit();
+  });
+});
+
 express.listen(port, host, () => {
   console.log(`Orkid UI ready at http://${host}:${port}`);
 });
