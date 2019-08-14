@@ -1,0 +1,37 @@
+#
+# This is a sample docker-compose.yml file that you can
+# use to run orkid-ui
+# https://github.com/mugli/orkid-ui
+#
+
+version: '3'
+
+services:
+  orkid-ui:
+    # Important! Replace <version> with a proper version
+    # Available tags/versions: https://hub.docker.com/r/orkidio/orkid-ui/tags
+    image: 'orkidio/orkid-ui:<version>'
+    container_name: orkid-ui
+    restart: unless-stopped
+    environment:
+      # This will check if HTTP_USER, HTTP_PASSWORD, REDIS_HOST are set
+      - NODE_ENV=production
+      - HTTP_USER=admin
+      # You can use "$MYPASS" as value too, for example,
+      # if your password is set in host environmental variable $MYPASS.
+      #
+      # Careful if your password contains $ sign. You have to use $$ (double-dollar sign)
+      # to escape that. For example, using "$$ecret" as value here
+      # will be evaluated as "$ecret", that's gonna be your password.
+      - HTTP_PASSWORD="_secret_password_"
+      # Important! IP/Host of the Redis Server.
+      # Common mistake is passing localhost or 127.0.0.1 here, unless you are sure about
+      # what you are doing.
+      - REDIS_HOST=192.168.0.105
+    ports:
+      - '3000:3000'
+    networks:
+      - orkidnet
+
+networks:
+  orkidnet:
