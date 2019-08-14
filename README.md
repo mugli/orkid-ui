@@ -14,6 +14,13 @@ Dashboard to monitor and manage [Orkid task queue](https://github.com/mugli/orki
 
 ## Running locally
 
+```md
+Minimum Requirements:
+
+- Node.js >= 10
+- Redis >= 5
+```
+
 The simplest way to run orkid-ui is using `npx`.
 
 ```sh
@@ -177,7 +184,7 @@ npm run dev
 
 ---
 
-## Maintainer
+## Maintainer(s)
 
 - Mehdi Hasan Khan (Twitter: [@MehdiHK](https://twitter.com/MehdiHK))
 
