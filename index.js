@@ -14,7 +14,7 @@ function initServer(redisConfig, httpUser, httpPass) {
   const app = express();
   app.use(cors());
   app.set('x-powered-by', false);
-  app.use(morgan());
+  app.use(morgan('combined'));
 
   if (httpUser && httpPass) {
     console.log('Using basic authentication');
