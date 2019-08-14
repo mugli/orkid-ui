@@ -27,7 +27,7 @@ services:
       # Important! IP/Host of the Redis Server.
       # Common mistake is passing localhost or 127.0.0.1 here, unless you are sure about
       # what you are doing.
-      - REDIS_HOST=192.168.0.105
+      - REDIS_HOST=_REDIS_HOST_OR_IP_TO_CONNECT_TO_
     ports:
       - '3000:3000'
     networks:

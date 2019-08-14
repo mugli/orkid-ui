@@ -28,7 +28,11 @@ Open in browser: http://localhost:3000
 You can change these behaviors using environmental variables ([see below for the full list of supported env variables](#available-environment-variables)). For example:
 
 ```sh
-HTTP_PORT=1337 HTTP_USER=admin HTTP_PASSWORD="_your_military_grade_secret_password_" REDIS_HOST=127.0.0.1 npx orkid-ui
+HTTP_PORT=1337 \
+  HTTP_USER=admin \
+  HTTP_PASSWORD="_your_military_grade_secret_password_" \
+  REDIS_HOST=_REDIS_HOST_OR_IP_TO_CONNECT_TO_ \
+  npx orkid-ui
 ```
 
 Open in browser: http://localhost:1337
@@ -47,14 +51,22 @@ To start the container:
 
 ```sh
 # use sudo if necessary
-docker run --name orkid-ui -d --env "HTTP_USER=admin" --env "HTTP_PASSWORD=_your_secret_password_" --env "REDIS_HOST=192.168.0.105" -p 1337:3000 --rm orkidio/orkid-ui:<version>
+docker run \
+  --name orkid-ui \
+  --detach \
+  --env "HTTP_USER=admin" \
+  --env "HTTP_PASSWORD=_your_secret_password_" \
+  --env "REDIS_HOST=_REDIS_HOST_OR_IP_TO_CONNECT_TO_" \
+  --publish 1337:3000 \
+  --rm \
+  orkidio/orkid-ui:<version>
 ```
 
 Replace `<version>` in `orkidio/orkid-ui:<version>` with a proper orkid-ui docker image version. **It's always good practice to use a specific version on production**, although you can use `latest` as version too.
 
 > 🙌 For a list of available orkid-ui docker image versions/tags, see here: https://hub.docker.com/r/orkidio/orkid-ui/tags
 
-Now you can access orkid-ui on: http://localhost:1337 (or the host IP instead of localhost) with a username and password.
+Now you can access orkid-ui on: http://YOUR_IP:1337 with a username and password.
 
 ---
 
