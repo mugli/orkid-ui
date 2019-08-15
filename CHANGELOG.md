@@ -2,12 +2,21 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.5.0](https://github.com/mugli/orkid-ui/compare/v0.4.4...v0.5.0)
+
+> 15 August 2019
+
+- Add doc on how to run [`6b51aec`](https://github.com/mugli/orkid-ui/commit/6b51aecb1fed5787095bd5e5972a32e4d7746f7c)
+- Add sample docker-compose file [`e9445bd`](https://github.com/mugli/orkid-ui/commit/e9445bd54e4a3056764ac1528204a9d0856b7582)
+- Break shell commands to multi-line [`630718f`](https://github.com/mugli/orkid-ui/commit/630718fad550c41d800170cc1a07c2674faed2e7)
+
 #### [v0.4.4](https://github.com/mugli/orkid-ui/compare/0.4.1...v0.4.4)
 
 > 13 August 2019
 
 - Fix relative path by removing homepage from package.json [`636fcca`](https://github.com/mugli/orkid-ui/commit/636fcca2203ca3843987efef4bd45034e81bcf32)
 - Update changelog [`6e3b27f`](https://github.com/mugli/orkid-ui/commit/6e3b27fd3003ea3fe434a8e4d6ae43c4fcc79651)
+- Release 0.4.4 [`e01bcab`](https://github.com/mugli/orkid-ui/commit/e01bcabae57bdf37590f0a4fe0c1849611b62634)
 
 #### [0.4.1](https://github.com/mugli/orkid-ui/compare/0.4.0...0.4.1)
 
