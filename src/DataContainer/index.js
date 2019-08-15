@@ -43,6 +43,10 @@ class QueueDataContainer extends Component {
             return <NonIdealState icon="info-sign" title={error.message} />;
           }
 
+          if (!data[keyName]) {
+            return <NonIdealState icon="info-sign" title="The list is empty" />;
+          }
+
           this.availableNextCursor = data[keyName].taskFeed.nextCursor;
 
           return (

@@ -93,7 +93,7 @@ class QueueContainer extends Component {
               return (
                 <div>
                   <H2 style={{ textAlign: 'center' }}>Queues</H2>
-                  {queueNames.length ? (
+                  {queueNames && queueNames.length ? (
                     <QueueTable queueNames={queueNames} handleQueueSelection={this.handleQueueSelection} />
                   ) : (
                     <div style={{ textAlign: 'center' }}>

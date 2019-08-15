@@ -33,6 +33,10 @@ class QueueRow extends Component {
             return null;
           }
 
+          if (!queue) {
+            return null;
+          }
+
           return (
             <tr>
               <td className={Classes.MONOSPACE_TEXT}>
