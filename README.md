@@ -12,6 +12,16 @@ Dashboard to monitor and manage [Orkid task queue](https://github.com/mugli/orki
 
 ---
 
+## Table of Contents
+
+- [Running locally](#running-locally)
+- [Running with Docker](#running-with-docker)
+- [Running with docker-compose](#running-with-docker-compose-recommended-for-production)
+- [Available Environment Variables](#available-environment-variables)
+- [Development](#development)
+
+---
+
 ## Running locally
 
 ```md
