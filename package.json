@@ -1,6 +1,6 @@
 {
   "name": "orkid-ui",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Dashboard to monitor and manage Orkid task queue",
   "license": "MIT",
   "main": "index.js",
