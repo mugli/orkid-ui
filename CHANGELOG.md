@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.6.0](https://github.com/mugli/orkid-ui/compare/v0.5.0...v0.6.0)
+
+> 20 August 2019
+
+- Handle null results [`f067799`](https://github.com/mugli/orkid-ui/commit/f067799def84f3314254cc9e872bc3cfa0ae5b98)
+- Bump required orkid-api [`38d7820`](https://github.com/mugli/orkid-ui/commit/38d78209d3bd08f7d159d23c3351e8f9415f5456)
+- Update docker-compose.yml [`8b3318f`](https://github.com/mugli/orkid-ui/commit/8b3318f4637d8a0504fb167914f80bfe567dba27)
+
 #### [v0.5.0](https://github.com/mugli/orkid-ui/compare/v0.4.4...v0.5.0)
 
 > 15 August 2019
