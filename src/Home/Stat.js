@@ -22,7 +22,7 @@ class Stat extends Component {
     return (
       <Callout title={'Stats'} style={{ textAlign: 'center', marginBottom: '50px' }}>
         <Query query={this.GET_GLOBAL_STATES}>
-          {({ data, loading, error }) => {
+          {({ data = {}, loading, error }) => {
             if (loading) {
               return <div>Loading ...</div>;
             }

@@ -54,7 +54,7 @@ class QueueContainer extends Component {
     return (
       <div>
         <Query query={this.GET_QUEUE_NAMES}>
-          {({ data, loading, error }) => {
+          {({ data = {}, loading, error }) => {
             if (loading) {
               return <Spinner />;
             }
