@@ -33,7 +33,8 @@ class DeadList extends Component {
   render() {
     return (
       <div style={{ marginTop: '20px' }}>
-        <Callout title="🌑 Dead List" style={{ marginBottom: '20px' }}>
+        <Callout title="🌑 Dead List" style={{ marginBottom: '20px', padding: '20px' }}>
+          <br />
           Showing failed tasks from all queues that exceeded their retry limit. This is a capped list, older results
           will be removed automatically.
         </Callout>

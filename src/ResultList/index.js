@@ -34,7 +34,8 @@ class ResultList extends Component {
   render() {
     return (
       <div style={{ marginTop: '20px' }}>
-        <Callout title="🌕 Result List" style={{ marginBottom: '20px' }}>
+        <Callout title="🌕 Result List" style={{ marginBottom: '20px', padding: '20px' }}>
+          <br />
           Showing latest results from successful tasks of any queues. This is a capped list, older results will be
           removed automatically.
           <br />
