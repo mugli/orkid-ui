@@ -10,8 +10,12 @@ class QueueTable extends Component {
         <thead>
           <tr>
             <th>Queue Name</th>
-            <th>Pending Tasks</th>
-            <th>Active Workers</th>
+            <th>Waiting</th>
+            <th>Processed</th>
+            <th>Failed</th>
+            <th>Reties</th>
+            <th>Dead</th>
+            <th>Active Consumers</th>
           </tr>
         </thead>
         <tbody>

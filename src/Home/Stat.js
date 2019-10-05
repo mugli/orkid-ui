@@ -36,24 +36,24 @@ class Stat extends Component {
             return (
               <ButtonGroup minimal={true} style={{ display: 'flex' }}>
                 <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
-                  <H5 style={{ color: Colors.GOLD5 }}>Processed</H5>
-                  <H6>{stat.processed}</H6>
-                </Card>
-                <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
                   <H5 style={{ color: Colors.GOLD5 }}>Waiting</H5>
                   <H6>{stat.waiting}</H6>
+                </Card>
+                <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
+                  <H5 style={{ color: Colors.GOLD5 }}>Processed</H5>
+                  <H6>{stat.processed}</H6>
                 </Card>
                 <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
                   <H5 style={{ color: Colors.GOLD5 }}>Failed</H5>
                   <H6>{stat.failed}</H6>
                 </Card>
                 <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
-                  <H5 style={{ color: Colors.GOLD5 }}>Dead</H5>
-                  <H6>{stat.dead}</H6>
-                </Card>
-                <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
                   <H5 style={{ color: Colors.GOLD5 }}>Retries</H5>
                   <H6>{stat.retries}</H6>
+                </Card>
+                <Card elevation={Elevation.TWO} style={{ flex: 1 }}>
+                  <H5 style={{ color: Colors.GOLD5 }}>Dead</H5>
+                  <H6>{stat.dead}</H6>
                 </Card>
               </ButtonGroup>
             );

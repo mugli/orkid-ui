@@ -9,7 +9,13 @@ const GET_QUEUE_DATA = gql`
   query Queue($queueName: String!) {
     queue(name: $queueName) {
       name
-      taskCount
+      stat {
+        processed
+        failed
+        dead
+        waiting
+        retries
+      }
       isPaused
       activeWorkerCount
     }
@@ -46,9 +52,11 @@ function QueueRow({ queueName, handleQueueSelection }) {
           {queue.name}
         </Button>
       </td>
-      <td>
-        <a onClick={() => handleQueueSelection(queueName)}>{queue.taskCount}</a>
-      </td>
+      <td>{queue.stat.waiting}</td>
+      <td>{queue.stat.processed}</td>
+      <td>{queue.stat.failed}</td>
+      <td>{queue.stat.retries}</td>
+      <td>{queue.stat.dead}</td>
       <td>{queue.activeWorkerCount}</td>
     </tr>
   );
