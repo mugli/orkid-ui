@@ -28,6 +28,14 @@ class QueueDataContainer extends Component {
     }
   };
 
+  resetCursor = () => {
+    this.cursorStack = [];
+    this.availableNextCursor = undefined;
+    this.setState({
+      nextCursor: undefined
+    });
+  };
+
   render() {
     const { queueName, graphqlQuery, keyName, hideResult, hideError, hideQueueName, columnWidth } = this.props;
     const { nextCursor } = this.state;
