@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.9.0](https://github.com/mugli/orkid-ui/compare/v0.8.0...v0.9.0)
+
+> 6 October 2019
+
+- Add feature: filter by queue names on result, failed and dead lists [`6443a5c`](https://github.com/mugli/orkid-ui/commit/6443a5cbd044dc2a5327dc3ba9da24d7aa55dc4e)
+- Add new stats to home [`736bf9e`](https://github.com/mugli/orkid-ui/commit/736bf9e1cac665a6da9189ff22ba08b782e4c53d)
+- Update changelog [`1147735`](https://github.com/mugli/orkid-ui/commit/11477355accef1bd12201cbabddf5018c3a07f12)
+
 #### [v0.8.0](https://github.com/mugli/orkid-ui/compare/v0.7.0...v0.8.0)
 
 > 4 October 2019
