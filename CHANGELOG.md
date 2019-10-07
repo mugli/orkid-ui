@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.9.1](https://github.com/mugli/orkid-ui/compare/v0.9.0...v0.9.1)
+
+> 7 October 2019
+
+- Update changelog [`72f0ed3`](https://github.com/mugli/orkid-ui/commit/72f0ed3c16f3aec196ce641144f593d97760cec2)
+- Bump required orkid-api [`24c79a4`](https://github.com/mugli/orkid-ui/commit/24c79a49473b602f0e767572846504e8a53b5a2c)
+
 #### [v0.9.0](https://github.com/mugli/orkid-ui/compare/v0.8.0...v0.9.0)
 
 > 6 October 2019
