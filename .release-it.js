@@ -1,6 +1,7 @@
 module.exports = {
   hooks: {
-    'before:release': 'npx auto-changelog -p'
+    'before:release': 'npx auto-changelog -p',
+    'after:version:bump': 'npm run versionCheck'
   },
   git: {
     changelog: 'npx auto-changelog --stdout --commit-limit false --unreleased --template ./changelog-template.hbs',

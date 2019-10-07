@@ -2,6 +2,7 @@
 .git
 src
 public
+tools
 
 screenshot*.png
 
