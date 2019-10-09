@@ -37,7 +37,7 @@ The simplest way to run orkid-ui is using `npx`.
 npx orkid-ui
 ```
 
-Open in browser: http://localhost:3000
+Open in browser: http://localhost:3100
 
 - This will start orkid-ui in "non-production mode" (without basic authentication).
 - It'll try to connect to redis-server on localhost.
@@ -74,7 +74,7 @@ docker run \
   --env "HTTP_USER=admin" \
   --env "HTTP_PASSWORD=_your_secret_password_" \
   --env "REDIS_HOST=_REDIS_HOST_OR_IP_TO_CONNECT_TO_" \
-  --publish 1337:3000 \
+  --publish 1337:3100 \
   --rm \
   orkidio/orkid-ui:<version>
 ```
@@ -156,7 +156,7 @@ These env vars are available however you run orkid-ui.
 
 **HTTP_PORT**
 
-> HTTP port to listen to. Default is 3000.
+> HTTP port to listen to. Default is 3100.
 
 **HTTP_USER**
 

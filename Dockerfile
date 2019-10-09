@@ -22,5 +22,5 @@ RUN npm i --only=production
 RUN chown -R node:node /usr/src/app
 USER node
 
-EXPOSE 3000
+EXPOSE 3100
 CMD ["node", "bin/serve.js"]

@@ -4,13 +4,13 @@
 # https://github.com/mugli/orkid-ui
 #
 
-version: '3'
+version: "3"
 
 services:
   orkid-ui:
     # Important! Replace <version> with a proper version
     # Available tags/versions: https://hub.docker.com/r/orkidio/orkid-ui/tags
-    image: 'orkidio/orkid-ui:<version>'
+    image: "orkidio/orkid-ui:<version>"
     container_name: orkid-ui
     restart: unless-stopped
     environment:
@@ -29,5 +29,4 @@ services:
       # what you are doing.
       - REDIS_HOST=_REDIS_HOST_OR_IP_TO_CONNECT_TO_
     ports:
-      - '3000:3000'
-
+      - "3100:3100"

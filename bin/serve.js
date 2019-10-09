@@ -3,7 +3,7 @@
 // Get env variables
 const nodeEnv = process.env.NODE_ENV;
 const host = process.env.HTTP_HOST || '0.0.0.0';
-const port = process.env.HTTP_PORT || 3000;
+const port = process.env.HTTP_PORT || 3100;
 const user = process.env.HTTP_USER;
 const pass = process.env.HTTP_PASSWORD;
 const redisHost = process.env.REDIS_HOST;
