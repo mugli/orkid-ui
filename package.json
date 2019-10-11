@@ -40,13 +40,13 @@
   ],
   "proxy": "http://localhost:4100",
   "devDependencies": {
-    "@blueprintjs/core": "^3.18.1",
+    "@blueprintjs/core": "^3.19.1",
     "apollo-cache-inmemory": "^1.6.3",
     "apollo-client": "^2.6.4",
     "apollo-link-http": "^1.5.16",
     "auto-changelog": "^1.16.1",
     "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
@@ -55,7 +55,7 @@
     "react-apollo": "^3.1.2",
     "react-dom": "^16.10.2",
     "react-scripts": "^3.2.0",
-    "release-it": "^12.4.2",
+    "release-it": "^12.4.3",
     "semver": "^6.3.0"
   },
   "keywords": [
