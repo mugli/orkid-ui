@@ -1,2 +1,3 @@
-const feedLength = 10;
+const feedLength = Number(process.env.REACT_APP_FEED_LENGTH || 10);
+
 export { feedLength };

@@ -176,6 +176,10 @@ These env vars are available however you run orkid-ui.
 
 > Redis port to connect to. Default 6379.
 
+**REACT_APP_FEED_LENGTH**
+
+> Number of items to show per page in task feed. Default 10.
+
 ---
 
 ## Development
